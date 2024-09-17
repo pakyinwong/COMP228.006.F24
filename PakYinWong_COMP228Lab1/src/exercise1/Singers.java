@@ -13,25 +13,34 @@ public class Singers {
     //Constructors
     public Singers() {
         this.id = 0;
-        this.name = "";
-        this.address = "";
+        this.name = "default";
+        this.address = "default";
         this.dateOfBirth = null;
         this.albumsPublished = 0;
     }
 
     public Singers(int id) {
         this.id = id;
+        this.name = "default";
+        this.address = "default";
+        this.dateOfBirth = null;
+        this.albumsPublished = 0;
     }
 
     public Singers(int id, String name) {
         this.id = id;
         this.name = name;
+        this.address = "default";
+        this.dateOfBirth = null;
+        this.albumsPublished = 0;
     }
 
     public Singers(int id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
+        this.dateOfBirth = null;
+        this.albumsPublished = 0;
     }
 
     public Singers(int id, String name, String address, LocalDate dateOfBirth) {
@@ -39,6 +48,7 @@ public class Singers {
         this.name = name;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
+        this.albumsPublished = 0;
     }
 
     public Singers(int id, String name, String address, LocalDate dateOfBirth, int albumsPublished) {
