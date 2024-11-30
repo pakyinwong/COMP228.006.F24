@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pakyinwong_comp228lab5.HelloController">
+    <top>
+        <Label text="Game and Player" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-padding: 10;" alignment="CENTER" />
+    </top>
+
+    <left>
+        <GridPane hgap="10" vgap="10" style="-fx-padding: 10;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <!-- Add Game Section -->
+            <Label text="Add Game" style="-fx-font-size: 16; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label text="Game ID:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="gameIdField" promptText="Game ID" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label text="Game Title:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="gameTitleField" promptText="Enter Game Title" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Button text="Add Game" onAction="#insertGame" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+
+            <!-- Add Player Section -->
+            <Label text="Add Player" style="-fx-font-size: 16; -fx-font-weight: bold;" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+            <Label text="Player ID:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+            <TextField fx:id="playerIdField" promptText="Player ID" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+            <Label text="First Name:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+            <TextField fx:id="firstNameField" promptText="Enter First Name" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+            <Label text="Last Name:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+            <TextField fx:id="lastNameField" promptText="Enter Last Name" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+            <Label text="Address:" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+            <TextField fx:id="addressField" promptText="Enter Address" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+
+            <Label text="Postal Code:" GridPane.rowIndex="9" GridPane.columnIndex="0" />
+            <TextField fx:id="postalCodeField" promptText="Enter Postal Code" GridPane.rowIndex="9" GridPane.columnIndex="1" />
+
+            <Label text="Province:" GridPane.rowIndex="10" GridPane.columnIndex="0" />
+            <TextField fx:id="provinceField" promptText="Enter Province" GridPane.rowIndex="10" GridPane.columnIndex="1" />
+
+            <Label text="Phone Number:" GridPane.rowIndex="11" GridPane.columnIndex="0" />
+            <TextField fx:id="phoneNumberField" promptText="Enter Phone Number" GridPane.rowIndex="11" GridPane.columnIndex="1" />
+            <Button fx:id="addPlayerButton" onAction="#insertPlayer" text="Add Player"  GridPane.rowIndex="12" GridPane.columnIndex="0" />
+        </GridPane>
+    </left>
+
+    <center>
+        <GridPane hgap="10" vgap="10" style="-fx-padding: 10;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <Label text="Update Player" style="-fx-font-size: 16; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label text="Player ID:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="getPlayerIdField" promptText="Player ID" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label text="First Name:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="updateFirstNameField" promptText="Enter First Name" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Label text="Last Name:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <TextField fx:id="updateLastNameField" promptText="Enter Last Name" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+            <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+            <TextField fx:id="updateAddressField" promptText="Enter Address" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+            <Label text="Postal Code:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+            <TextField fx:id="updatePostalCodeField" promptText="Enter Postal Code" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+            <Label text="Province:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+            <TextField fx:id="updateProvinceField" promptText="Enter Province" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+            <Label text="Phone Number:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+            <TextField fx:id="updatePhoneNumberField" promptText="Enter Phone Number" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+            <Button fx:id="updatePlayerButton" onAction="#updatePlayer" text="Update Player"  GridPane.rowIndex="8" GridPane.columnIndex="0" />
+        </GridPane>
+    </center>
+
+    <right>
+        <GridPane hgap="10" vgap="10" style="-fx-padding: 10;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <Label text="Add Game-Player" style="-fx-font-size: 16; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label text="Player ID:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="playerIdGamePlayerField" promptText="Enter Player ID" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label text="Game ID:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="gameIdGamePlayerField" promptText="Enter Game ID" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            <Label text="Score:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <TextField fx:id="scoreField" promptText="Enter Score" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+            <Button fx:id="addGamePlayerButton" onAction="#insertGamePlayer" text="Add Game-Player"  GridPane.rowIndex="4" GridPane.columnIndex="0" />
+        </GridPane>
+    </right>
+
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="Display Report" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Label text="Player ID:" />
+                <TextField fx:id="playerIdReportField" promptText="Enter Player ID" />
+                <Button fx:id="displayReportButton" text="Display Report" onAction="#displayReport"/>
+            </HBox>
+            <TableView fx:id="reportTable" prefHeight="200">
+                <columns>
+                    <TableColumn text="Game Title" fx:id="gameTitleColumn" />
+                    <TableColumn text="First Name" fx:id="firstNameColumn" />
+                    <TableColumn text="Last Name" fx:id="lastNameColumn" />
+                    <TableColumn text="Score" fx:id="scoreColumn" />
+                    <TableColumn text="Playing Date" fx:id="playingDateColumn" />
+                </columns>
+            </TableView>
+        </VBox>
+    </bottom>
+</BorderPane>
