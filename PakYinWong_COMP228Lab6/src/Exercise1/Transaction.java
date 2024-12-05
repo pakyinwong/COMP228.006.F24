@@ -1,3 +1,5 @@
+package Exercise1;
+
 public class Transaction implements Runnable {
     private Account account;
     private double amount;
